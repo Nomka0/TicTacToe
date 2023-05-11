@@ -56,6 +56,7 @@ public class VentanaNombres extends JFrame {
     }
     
     private void iniciarComponentesModo1() {
+        Font fDialog = new Font(Font.DIALOG_INPUT, Font.BOLD,  20);
         setTitle("TicTacToe");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
@@ -79,28 +80,28 @@ public class VentanaNombres extends JFrame {
         jpContenido.add(lblTitulo);
         
         jlMensaje = new JLabel("Por favor, escriba el nombre del Jugador 1 ");
-        jlMensaje.setBounds(150,-100, 700,500);
+        jlMensaje.setBounds(100,-100, 700,500);
         jlMensaje.setForeground(Color.WHITE);
-        jlMensaje.setFont(new Font("arial", Font.BOLD, 20));
+        jlMensaje.setFont(fDialog);
         jpContenido.add(jlMensaje);
         
         txtNombre1 = new JTextField("");
         txtNombre1.setHorizontalAlignment(JTextField.CENTER);
         txtNombre1.setForeground(Color.BLACK);
-        txtNombre1.setFont(new Font("arial", Font.BOLD, 20)); 
+        txtNombre1.setFont(fDialog); 
         txtNombre1.setBounds(150,190,400, 30);
         jpContenido.add(txtNombre1);
                
         jlMensaje2 = new JLabel("Por favor, escriba el nombre del Jugador 2");
-        jlMensaje2.setBounds(150,20, 700,500);
+        jlMensaje2.setBounds(100,20, 700,500);
         jlMensaje2.setForeground(Color.WHITE);
-        jlMensaje2.setFont(new Font("arial", Font.BOLD, 20));
+        jlMensaje2.setFont(fDialog);
         jpContenido.add(jlMensaje2);
         
         txtNombre2 = new JTextField("");
         txtNombre2.setHorizontalAlignment(JTextField.CENTER);
         txtNombre2.setForeground(Color.BLACK);
-        txtNombre2.setFont(new Font("arial", Font.BOLD, 20)); 
+        txtNombre2.setFont(fDialog); 
         txtNombre2.setBounds(150,310,400, 30);
         jpContenido.add(txtNombre2);
         
@@ -126,6 +127,7 @@ public class VentanaNombres extends JFrame {
 }
     
     private void iniciarComponentesModo2() {
+        Font fDialog = new Font(Font.DIALOG_INPUT, Font.BOLD,  20);
         setTitle("TicTacToe");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
@@ -151,13 +153,13 @@ public class VentanaNombres extends JFrame {
         jlMensaje = new JLabel("Por favor, escriba el nombre del Jugador ");
         jlMensaje.setBounds(150,-30, 700,500);
         jlMensaje.setForeground(Color.WHITE);
-        jlMensaje.setFont(new Font("arial", Font.BOLD, 20));
+        jlMensaje.setFont(fDialog);
         jpContenido.add(jlMensaje);
         
         txtNombre1 = new JTextField("");
         txtNombre1.setHorizontalAlignment(JTextField.CENTER);
         txtNombre1.setForeground(Color.BLACK);
-        txtNombre1.setFont(new Font("arial", Font.BOLD, 20)); 
+        txtNombre1.setFont(fDialog); 
         txtNombre1.setBounds(145,250,400, 30);
         jpContenido.add(txtNombre1);
         

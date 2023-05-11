@@ -38,6 +38,8 @@ public class VentanaPrincipal extends JFrame {
     
     public VentanaPrincipal(){
         iniciarComponentes();
+        jpContenido.revalidate();
+        jpContenido.repaint(); 
     }
     
     private void iniciarComponentes() {
