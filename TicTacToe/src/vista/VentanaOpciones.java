@@ -40,7 +40,7 @@ public class VentanaOpciones extends JFrame {
     private JButton btnRondas4;
     private JLabel lblFondo;
     private JLabel lblTitulo;
-    private int numeroRondas;
+    private int numeroRounds;
     private int modoJuego;
     
     public VentanaOpciones(){
@@ -132,10 +132,10 @@ public class VentanaOpciones extends JFrame {
     
     private void ObtenerNombres() {
         if (modoJuego == 1) {
-            VentanaNombres ventana = new VentanaNombres(modoJuego);
+            VentanaNombres ventana = new VentanaNombres(modoJuego, numeroRounds);
             dispose();
         } else if (modoJuego == 2) {
-            VentanaNombres ventana = new VentanaNombres(modoJuego);
+            VentanaNombres ventana = new VentanaNombres(modoJuego, numeroRounds);
             dispose();
         }
     }
@@ -144,19 +144,19 @@ public class VentanaOpciones extends JFrame {
         @Override
         public void actionPerformed(ActionEvent evento){
             if(evento.getSource() == btnRondas1){                
-               numeroRondas = 1;
+               numeroRounds = 0;
                ObtenerNombres();
             } 
             else if (evento.getSource() == btnRondas2) {
-               numeroRondas = 2;
+               numeroRounds = 1;
                ObtenerNombres();
             }          
             else if (evento.getSource() == btnRondas3){
-               numeroRondas = 3;
+               numeroRounds = 2;
                ObtenerNombres();
             }
             else if (evento.getSource() == btnRondas4){
-               numeroRondas = 4;
+               numeroRounds = 3;
                ObtenerNombres();
             }
         }

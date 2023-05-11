@@ -36,15 +36,17 @@ public class VentanaNombres extends JFrame {
     private JButton btnAtras;
     private JLabel lblFondo;
     private JLabel lblTitulo;
-    private int numeroRondas;
     private int modoJuego;
+    int numeroRounds;
     
     public VentanaNombres(){
     }
        
-    public VentanaNombres(int modo){
+    public VentanaNombres(int modo,int numeroRondas){
         modoJuego = modo;
         VerificarModo();
+        numeroRounds = numeroRondas;
+        System.out.println(numeroRounds);
     }
     
     private void VerificarModo () {
@@ -193,7 +195,7 @@ public class VentanaNombres extends JFrame {
             Jugador jugador2 = new Jugador(nombre2);
             System.out.println(nombre1);
             System.out.println(nombre2);
-            VentanaJuego ventanaJuego = new VentanaJuego(jugador1,jugador2, modoJuego);
+            VentanaJuego ventanaJuego = new VentanaJuego(jugador1,jugador2, modoJuego, numeroRounds);
             dispose();
         } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese el nombre de ambos jugadores", 
