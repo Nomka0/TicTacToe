@@ -76,12 +76,6 @@ public class VentanaPrincipal extends JFrame {
         //btnJugar.addMouseListener(new ManejadoraDeMouse());
         jpContenido.add(btnJugar);
         
-   
-
-        
-        btnInstrucciones = new JButton("Instrucciones");
-        btnInstrucciones.setBounds(250,340, 180,35);
-        jpContenido.add(btnInstrucciones);
         
         ImageIcon fondo = new ImageIcon("img/fondo.jpg");
         lblFondo = new JLabel();  
@@ -92,7 +86,7 @@ public class VentanaPrincipal extends JFrame {
         ManejadorDeEventos manejadorEventos = new ManejadorDeEventos();
         
         btnJugar.addActionListener(manejadorEventos);
-        btnInstrucciones.addActionListener(manejadorEventos);
+      
         
         
     }
@@ -104,9 +98,7 @@ public class VentanaPrincipal extends JFrame {
             if(evento.getSource() == btnJugar){                
                VentanaOpciones ventana = new VentanaOpciones();
                dispose();
-            } else if (evento.getSource() == btnInstrucciones) {
-               JOptionPane.showMessageDialog(null, "El clásico Triqui", "Instrucciones", JOptionPane.PLAIN_MESSAGE);
-            }
+            } 
         }
         
        
