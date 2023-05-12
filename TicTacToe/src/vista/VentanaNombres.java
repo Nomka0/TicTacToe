@@ -82,7 +82,7 @@ public class VentanaNombres extends JFrame {
         jpContenido.add(lblTitulo);
         
         jlMensaje = new JLabel("Por favor, escriba el nombre del Jugador 1 ");
-        jlMensaje.setBounds(100,-100, 700,500);
+        jlMensaje.setBounds(90,-100, 700,500);
         jlMensaje.setForeground(Color.WHITE);
         jlMensaje.setFont(fDialog);
         jpContenido.add(jlMensaje);
@@ -195,7 +195,7 @@ public class VentanaNombres extends JFrame {
             Jugador jugador2 = new Jugador(nombre2);
             System.out.println(nombre1);
             System.out.println(nombre2);
-            VentanaJuego ventanaJuego = new VentanaJuego(jugador1,jugador2, modoJuego, numeroRounds);
+            VentanaJuego ventanaJuego = new VentanaJuego(jugador1,jugador2, modoJuego, numeroRounds,0,0);
             dispose();
         } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese el nombre de ambos jugadores", 
@@ -205,8 +205,9 @@ public class VentanaNombres extends JFrame {
             String nombre =txtNombre1.getText();
             if(!nombre.trim().isEmpty() || nombre.trim().length() > 0 ) {
                 Jugador jugador = new Jugador(nombre);
-                System.out.println(nombre);
-                VentanaJuego ventanaJuego = new VentanaJuego(jugador, modoJuego);
+                Jugador pc = new Jugador("El PC");
+                System.out.println("PC");
+                VentanaJuego ventanaJuego = new VentanaJuego(jugador,pc, modoJuego, numeroRounds,0,0);
                 dispose();
             } else {
             JOptionPane.showMessageDialog(null,"Por favor ingrese el nombre del jugador", 

@@ -64,13 +64,23 @@ public class VentanaPrincipal extends JFrame {
         lblTitulo.setBounds(40,-120, 700,500);
         lblTitulo.setIcon(titulo);
         jpContenido.add(lblTitulo);
-              
+        
+        ImageIcon Jugar = new ImageIcon("img/Jugar.png");
         btnJugar = new JButton("Jugar");
-        btnJugar.setBounds(250,220, 180,35);
+        btnJugar.setBounds(250,220, 176,104);
+        btnJugar.setOpaque(false);
+        btnJugar.setContentAreaFilled(false);
+        btnJugar.setBorderPainted(false);
+        btnJugar.setFocusPainted(false);
+        btnJugar.setIcon(new ImageIcon(Jugar.getImage().getScaledInstance(btnJugar.getWidth(), btnJugar.getHeight(), Image.SCALE_SMOOTH)));
+        //btnJugar.addMouseListener(new ManejadoraDeMouse());
         jpContenido.add(btnJugar);
         
+   
+
+        
         btnInstrucciones = new JButton("Instrucciones");
-        btnInstrucciones.setBounds(250,290, 180,35);
+        btnInstrucciones.setBounds(250,340, 180,35);
         jpContenido.add(btnInstrucciones);
         
         ImageIcon fondo = new ImageIcon("img/fondo.jpg");
